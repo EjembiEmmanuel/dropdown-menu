@@ -2,10 +2,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
-  entry: {
-    index: "./src/index.js",
-  },
+  mode: "production",
+  entry: "./src/index.js",
   devtool: "inline-source-map",
   devServer: {
     static: "./dist",
@@ -17,13 +15,14 @@ module.exports = {
     }),
   ],
   output: {
-    filename: "[name].bundle.js",
+    filename: "index.js",
     path: path.resolve(__dirname, "dist"),
-    library: "[name]",
+    globalObject: "this",
+    library: {
+      name: "dropdown",
+      type: "umd",
+    },
     clean: true,
-  },
-  optimization: {
-    runtimeChunk: "single",
   },
   module: {
     rules: [
