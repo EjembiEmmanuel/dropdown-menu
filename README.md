@@ -20,6 +20,10 @@ like revealing and hiding dropdown menus and also trigerring dropdown animations
         <a class="dropdown-item" href="#">Item 1</a>
     </div>
 </div>
+
+<!-- Copy and paste the script tags into your HTML file if you're not using a module bundler like webpack -->
+<script src="https://unpkg.com/oche-dropdown-menu@1.0.4/dist/index.js"></script>
+<script src="./index.js"></script>
 ```
 
 ### CSS (Optional)
@@ -82,6 +86,20 @@ background-color: rgba(19, 50, 54, 0.3);
 ```
 
 ### JavaScript
+
+#### Usage on the web
+
+```
+const dropDownBtns = document.querySelectorAll(".dropdown-toggle");
+
+dropDownBtns.forEach(function (dropDownBtn) {
+  dropDownBtn.onclick = function (event) {
+    window.dropdown.showDropDownMenu(event.target, "animation");
+  };
+});
+```
+
+#### Usage in a Node.js development enviroment with a module bundler like webpack
 
 ```
 const dropdown = require("oche-dropdown-menu")

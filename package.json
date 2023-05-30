@@ -1,6 +1,6 @@
 {
   "name": "oche-dropdown-menu",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "This a package for implementing basic dropdown menu functionalities",
   "main": "dist/index.js",
   "scripts": {
@@ -21,7 +21,5 @@
     "webpack": "^5.84.1",
     "webpack-cli": "^5.1.1",
     "webpack-dev-server": "^4.15.0"
-  },
-  "dependencies": {
   }
 }
